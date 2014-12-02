@@ -30,9 +30,26 @@ public:
     MorseChar() : mAscChar('\0'), mCode(NULL) {
     }
 
+    /**
+     * @brief Construct a MorseChar object for the given ASCII character
+     *        and morse code.
+     *
+     * @param ascii The character which will be represented by morse code.
+     * @param code  The morse code string that represents the character.
+     * @param n     The size of code in characters.
+     **/
     MorseChar(char ascii, const char * code, size_t n) : mAscChar(ascii), mCode(_strdup(code)) {
     }
 
+    /**
+     * @brief The copy constructor.
+     *
+     * @param o The constructor for which to copy from
+     *
+     * @note The copy constructor's purpose is to take ownership of the
+     *       internal mCode pointer. This is to add efficiency to memory
+     *       utilization.
+     **/
     MorseChar(MorseChar & o) {
         mAscChar = o.mAscChar;
         mCode = o.mCode;
@@ -43,16 +60,35 @@ public:
         free(mCode);
     }
 
+    /**
+     * @brief Set this object's ascii character
+     *
+     * @param ascii Usually an alpha-numeric ASCII-character.
+     **/
     void setAsciiCharacter(char ascii) {
         mAscChar = ascii;
     }
+
+    /**
+     * @brief Set this object's morse code. Copies the value to our own area.
+     *
+     * @param code Usually a string of '.' and '-' *MUST* be NULL-terminated
+     **/
     void setMorseCode(const char * code) {
         free(mCode);
         mCode = _strdup(code);
     }
+
+    /**
+     * @brief Gets the ASCII character that is represented by morse code.
+     **/
     char getAsciiCharacter() const {
         return (mAscChar);
     }
+
+    /**
+     * @brief Gets the Morse Code that represents this character.
+     **/
     const char * getMorseCode() const {
         return (mCode);
     }

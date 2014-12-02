@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MorseConv", "MorseConv.vcxproj", "{FBC7F134-D235-44B2-ABD3-52013B5D15ED}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MorseConvLib", "MorseConvLib.vcxproj", "{DCCCA8D4-7492-4A82-9F1A-8DF1DBA75647}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FBC7F134-D235-44B2-ABD3-52013B5D15ED}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FBC7F134-D235-44B2-ABD3-52013B5D15ED}.Debug|Win32.Build.0 = Debug|Win32
+		{FBC7F134-D235-44B2-ABD3-52013B5D15ED}.Release|Win32.ActiveCfg = Release|Win32
+		{FBC7F134-D235-44B2-ABD3-52013B5D15ED}.Release|Win32.Build.0 = Release|Win32
+		{DCCCA8D4-7492-4A82-9F1A-8DF1DBA75647}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DCCCA8D4-7492-4A82-9F1A-8DF1DBA75647}.Debug|Win32.Build.0 = Debug|Win32
+		{DCCCA8D4-7492-4A82-9F1A-8DF1DBA75647}.Release|Win32.ActiveCfg = Release|Win32
+		{DCCCA8D4-7492-4A82-9F1A-8DF1DBA75647}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

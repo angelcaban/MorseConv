@@ -21,6 +21,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "stdafx.h"
 
+/**
+ * This class abstracts a character and its representative morse code string
+ * usually in the form of dots and dashes.
+ *
+ * The class keeps its own internal copy of the morse code for the character,
+ * and will release memory through the destructor. All instance variables
+ * should not be heavily modified once this object is created. Furthermore, we
+ * expect, but do not enforce, that this object is immutable.
+ *
+ * @note This class was tested with only ASCII c-strings.
+ *
+ * @todo Generalize this class to use other types of characters.
+ **/
 class MorseChar {
 private:
     char mAscChar;

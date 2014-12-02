@@ -23,6 +23,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 class MorseChar;
 
+/**
+ * This class is a container for a string of MorseChar objects.
+ * Its only purpose is to contain pointers to already-created MorseChar
+ * objects so that a MorseString object effectively abstracts a Morse-Code
+ * String.
+ *
+ * The most efficient way to use this class is through the createFromAscii
+ * static method. This ensures that multiple MorseString objects reference
+ * the same pool of allocated MorseChar objects, thereby minimizing memory
+ * usage.
+ **/
 class MorseString {
 private:
     static const unsigned SIZE_MULT;

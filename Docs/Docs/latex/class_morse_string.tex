@@ -1,0 +1,424 @@
+\hypertarget{class_morse_string}{\section{Morse\-String Class Reference}
+\label{class_morse_string}\index{Morse\-String@{Morse\-String}}
+}
+
+
+{\ttfamily \#include $<$Morse\-String.\-hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_morse_string_1_1__iter}{\-\_\-iter}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_morse_char}{Morse\-Char} $\ast$$\ast$ \hyperlink{class_morse_string_a7f22a5166595e9f06e160159b6b5a878}{\-\_\-\-My\-\_\-\-Type}
+\item 
+typedef \hyperlink{class_morse_char}{Morse\-Char} $\ast$ \hyperlink{class_morse_string_a9fd4ff95c331104a9e2954921201b8af}{\-\_\-\-My\-\_\-\-Iter}
+\item 
+typedef \hyperlink{class_morse_string_1_1__iter}{\-\_\-iter} \hyperlink{class_morse_string_aed59863122221676213d8467a2774601}{iterator}
+\item 
+typedef const \hyperlink{class_morse_string_1_1__iter}{\-\_\-iter} \hyperlink{class_morse_string_a8187161e4517b8721bdb562d90200cfd}{const\-\_\-iterator}
+\item 
+typedef size\-\_\-t \hyperlink{class_morse_string_a87ad452a5f61d3e7468497bdc03a7e6a}{size\-\_\-type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_morse_string_a58fd768c4206dbad63335a88ad9a8835}{Morse\-String} ()
+\item 
+\hyperlink{class_morse_string_a9ca5e741842ff4661dd39682f55e2174}{$\sim$\-Morse\-String} ()
+\item 
+void \hyperlink{class_morse_string_af597ac5411821fc471f6149d4a927572}{add} (\hyperlink{class_morse_char}{Morse\-Char} $\ast$morse)
+\begin{DoxyCompactList}\small\item\em Add a Morse Code Character to this container. Adjusts memory allocation for internal string buffer if necessary. \end{DoxyCompactList}\item 
+\hyperlink{class_morse_char}{Morse\-Char} $\ast$const $\ast$ \hyperlink{class_morse_string_a3cb4e2bce884cd3f86dba55692a80952}{buffer} () const 
+\begin{DoxyCompactList}\small\item\em Gets the internal buffer of morse code characters. \end{DoxyCompactList}\item 
+\hyperlink{class_morse_string_aed59863122221676213d8467a2774601}{iterator} \hyperlink{class_morse_string_a6ec233c4b9ed7f933e3d0db65662d250}{begin} ()
+\begin{DoxyCompactList}\small\item\em Gets the beginning of this string. \end{DoxyCompactList}\item 
+\hyperlink{class_morse_string_a8187161e4517b8721bdb562d90200cfd}{const\-\_\-iterator} \hyperlink{class_morse_string_a7f7ef3a8de9fa1a3e422da39f350caa3}{begin} () const 
+\begin{DoxyCompactList}\small\item\em Gets the beginning of this string. \end{DoxyCompactList}\item 
+\hyperlink{class_morse_string_aed59863122221676213d8467a2774601}{iterator} \hyperlink{class_morse_string_aca140f1865de7913bed748748b2365c7}{end} ()
+\begin{DoxyCompactList}\small\item\em Gets the end of this string (passed the last character). \end{DoxyCompactList}\item 
+\hyperlink{class_morse_string_a8187161e4517b8721bdb562d90200cfd}{const\-\_\-iterator} \hyperlink{class_morse_string_ad3bab83787cf1938feda565894b3a268}{end} () const 
+\begin{DoxyCompactList}\small\item\em Gets the end of this string (passed the last character). \end{DoxyCompactList}\item 
+\hyperlink{class_morse_string_a87ad452a5f61d3e7468497bdc03a7e6a}{size\-\_\-type} \hyperlink{class_morse_string_ad6bc73513fbab3b758fb85c865c54cd0}{size} () const 
+\begin{DoxyCompactList}\small\item\em Return the current size of this string. \end{DoxyCompactList}\item 
+bool \hyperlink{class_morse_string_ae32d77ba2cd12479ba18f8bbc328a335}{empty} () const 
+\begin{DoxyCompactList}\small\item\em Return true if the current size of this string is 0. \end{DoxyCompactList}\item 
+\hyperlink{class_morse_char}{Morse\-Char} const $\ast$ \hyperlink{class_morse_string_a5f1355f99e372c138304b1613ce5c0a8}{get\-By\-Ascii} (char c) const 
+\begin{DoxyCompactList}\small\item\em Looks for the character, c, in this string. The character to look for is case-\/insensitive. \end{DoxyCompactList}\item 
+\hyperlink{class_morse_char}{Morse\-Char} const $\ast$ \hyperlink{class_morse_string_a9eb4dbebd5f6c28bf7453dabdbd46a1b}{get\-By\-Morse} (const char $\ast$code, size\-\_\-t n) const 
+\begin{DoxyCompactList}\small\item\em Looks for the morse code, code, in this string. Generally, the morse code M\-U\-S\-T be a character string pointer consisting of only '.' and '-\/' and ' ' and possibly a N\-U\-L\-L. \end{DoxyCompactList}\item 
+void \hyperlink{class_morse_string_a6938ba103471da987c825e24c9ae955f}{to\-String} (char $\ast$str, size\-\_\-t n) const 
+\begin{DoxyCompactList}\small\item\em Translate this string into a series of '.' and '-\/' and '/' and ' ' A\-S\-C\-I\-I characters as a representation of this string's morse code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_morse_string}{Morse\-String} const \& \hyperlink{class_morse_string_ab11e5de676e09c65fb50289626d5410c}{all\-Codes} ()
+\begin{DoxyCompactList}\small\item\em Return a reference to a continuous string of possible Morse Code values. In order to lookup a Morse to Character conversion, use the following methods\-: \end{DoxyCompactList}\item 
+static void \hyperlink{class_morse_string_a2324c605f87c9858ab6985d33715a725}{create\-From\-Ascii} (\hyperlink{class_morse_string}{Morse\-String} \&result, const char $\ast$ascii, size\-\_\-t n)
+\begin{DoxyCompactList}\small\item\em Utility method for populating a \hyperlink{class_morse_string}{Morse\-String} object with the corresponding \hyperlink{class_morse_char}{Morse\-Char} objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is a container for a string of \hyperlink{class_morse_char}{Morse\-Char} objects. Its only purpose is to contain pointers to already-\/created \hyperlink{class_morse_char}{Morse\-Char} objects so that a \hyperlink{class_morse_string}{Morse\-String} object effectively abstracts a Morse-\/\-Code String.
+
+The most efficient way to use this class is through the create\-From\-Ascii static method. This ensures that multiple \hyperlink{class_morse_string}{Morse\-String} objects reference the same pool of allocated \hyperlink{class_morse_char}{Morse\-Char} objects, thereby minimizing memory usage. 
+
+Definition at line 37 of file Morse\-String.\-hpp.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_morse_string_a9fd4ff95c331104a9e2954921201b8af}{\index{Morse\-String@{Morse\-String}!\-\_\-\-My\-\_\-\-Iter@{\-\_\-\-My\-\_\-\-Iter}}
+\index{\-\_\-\-My\-\_\-\-Iter@{\-\_\-\-My\-\_\-\-Iter}!MorseString@{Morse\-String}}
+\subsubsection[{\-\_\-\-My\-\_\-\-Iter}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Morse\-Char}$\ast$ {\bf Morse\-String\-::\-\_\-\-My\-\_\-\-Iter}}}\label{class_morse_string_a9fd4ff95c331104a9e2954921201b8af}
+
+
+Definition at line 51 of file Morse\-String.\-hpp.
+
+\hypertarget{class_morse_string_a7f22a5166595e9f06e160159b6b5a878}{\index{Morse\-String@{Morse\-String}!\-\_\-\-My\-\_\-\-Type@{\-\_\-\-My\-\_\-\-Type}}
+\index{\-\_\-\-My\-\_\-\-Type@{\-\_\-\-My\-\_\-\-Type}!MorseString@{Morse\-String}}
+\subsubsection[{\-\_\-\-My\-\_\-\-Type}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Morse\-Char}$\ast$$\ast$ {\bf Morse\-String\-::\-\_\-\-My\-\_\-\-Type}}}\label{class_morse_string_a7f22a5166595e9f06e160159b6b5a878}
+
+
+Definition at line 50 of file Morse\-String.\-hpp.
+
+\hypertarget{class_morse_string_a8187161e4517b8721bdb562d90200cfd}{\index{Morse\-String@{Morse\-String}!const\-\_\-iterator@{const\-\_\-iterator}}
+\index{const\-\_\-iterator@{const\-\_\-iterator}!MorseString@{Morse\-String}}
+\subsubsection[{const\-\_\-iterator}]{\setlength{\rightskip}{0pt plus 5cm}typedef const {\bf \-\_\-iter} {\bf Morse\-String\-::const\-\_\-iterator}}}\label{class_morse_string_a8187161e4517b8721bdb562d90200cfd}
+
+
+Definition at line 93 of file Morse\-String.\-hpp.
+
+\hypertarget{class_morse_string_aed59863122221676213d8467a2774601}{\index{Morse\-String@{Morse\-String}!iterator@{iterator}}
+\index{iterator@{iterator}!MorseString@{Morse\-String}}
+\subsubsection[{iterator}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf \-\_\-iter} {\bf Morse\-String\-::iterator}}}\label{class_morse_string_aed59863122221676213d8467a2774601}
+
+
+Definition at line 92 of file Morse\-String.\-hpp.
+
+\hypertarget{class_morse_string_a87ad452a5f61d3e7468497bdc03a7e6a}{\index{Morse\-String@{Morse\-String}!size\-\_\-type@{size\-\_\-type}}
+\index{size\-\_\-type@{size\-\_\-type}!MorseString@{Morse\-String}}
+\subsubsection[{size\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef size\-\_\-t {\bf Morse\-String\-::size\-\_\-type}}}\label{class_morse_string_a87ad452a5f61d3e7468497bdc03a7e6a}
+
+
+Definition at line 94 of file Morse\-String.\-hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_morse_string_a58fd768c4206dbad63335a88ad9a8835}{\index{Morse\-String@{Morse\-String}!Morse\-String@{Morse\-String}}
+\index{Morse\-String@{Morse\-String}!MorseString@{Morse\-String}}
+\subsubsection[{Morse\-String}]{\setlength{\rightskip}{0pt plus 5cm}Morse\-String\-::\-Morse\-String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_morse_string_a58fd768c4206dbad63335a88ad9a8835}
+
+
+Definition at line 81 of file Morse\-String.\-cpp.
+
+\hypertarget{class_morse_string_a9ca5e741842ff4661dd39682f55e2174}{\index{Morse\-String@{Morse\-String}!$\sim$\-Morse\-String@{$\sim$\-Morse\-String}}
+\index{$\sim$\-Morse\-String@{$\sim$\-Morse\-String}!MorseString@{Morse\-String}}
+\subsubsection[{$\sim$\-Morse\-String}]{\setlength{\rightskip}{0pt plus 5cm}Morse\-String\-::$\sim$\-Morse\-String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_morse_string_a9ca5e741842ff4661dd39682f55e2174}
+
+
+Definition at line 98 of file Morse\-String.\-hpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_morse_string_af597ac5411821fc471f6149d4a927572}{\index{Morse\-String@{Morse\-String}!add@{add}}
+\index{add@{add}!MorseString@{Morse\-String}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}void Morse\-String\-::add (
+\begin{DoxyParamCaption}
+\item[{{\bf Morse\-Char} $\ast$}]{morse}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_morse_string_af597ac5411821fc471f6149d4a927572}
+
+
+Add a Morse Code Character to this container. Adjusts memory allocation for internal string buffer if necessary. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em morse} & A valid address to a \hyperlink{class_morse_char}{Morse\-Char} object. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 126 of file Morse\-String.\-hpp.
+
+\hypertarget{class_morse_string_ab11e5de676e09c65fb50289626d5410c}{\index{Morse\-String@{Morse\-String}!all\-Codes@{all\-Codes}}
+\index{all\-Codes@{all\-Codes}!MorseString@{Morse\-String}}
+\subsubsection[{all\-Codes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Morse\-String} const \& Morse\-String\-::all\-Codes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_morse_string_ab11e5de676e09c65fb50289626d5410c}
+
+
+Return a reference to a continuous string of possible Morse Code values. In order to lookup a Morse to Character conversion, use the following methods\-: 
+
+
+\begin{DoxyCode}
+\hyperlink{class_morse_char}{MorseChar} code;
+\textcolor{keywordtype}{char} ascii\_char w = \textcolor{charliteral}{'W'};
+\textcolor{keyword}{const} \textcolor{keywordtype}{char} * morseStr = \textcolor{stringliteral}{"...."};
+
+code = \hyperlink{class_morse_string_ab11e5de676e09c65fb50289626d5410c}{MorseString::allCodes}().\hyperlink{class_morse_string_a5f1355f99e372c138304b1613ce5c0a8}{getByAscii}(ascii\_char);
+    \textcolor{comment}{// code contains \{ 'W', ".--" \}}
+code = \hyperlink{class_morse_string_ab11e5de676e09c65fb50289626d5410c}{MorseString::allCodes}().\hyperlink{class_morse_string_a9eb4dbebd5f6c28bf7453dabdbd46a1b}{getByMorse}(morseStr, \textcolor{keyword}{sizeof} (morseStr));
+    \textcolor{comment}{// code contains \{ 'H', "...." \}}
+\end{DoxyCode}
+ 
+
+Definition at line 85 of file Morse\-String.\-cpp.
+
+\hypertarget{class_morse_string_a6ec233c4b9ed7f933e3d0db65662d250}{\index{Morse\-String@{Morse\-String}!begin@{begin}}
+\index{begin@{begin}!MorseString@{Morse\-String}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf iterator} Morse\-String\-::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_morse_string_a6ec233c4b9ed7f933e3d0db65662d250}
+
+
+Gets the beginning of this string. 
+
+\begin{DoxyReturn}{Returns}
+The iterator that points to the first \hyperlink{class_morse_char}{Morse\-Char} 
+\end{DoxyReturn}
+
+
+Definition at line 146 of file Morse\-String.\-hpp.
+
+\hypertarget{class_morse_string_a7f7ef3a8de9fa1a3e422da39f350caa3}{\index{Morse\-String@{Morse\-String}!begin@{begin}}
+\index{begin@{begin}!MorseString@{Morse\-String}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const\-\_\-iterator} Morse\-String\-::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_morse_string_a7f7ef3a8de9fa1a3e422da39f350caa3}
+
+
+Gets the beginning of this string. 
+
+\begin{DoxyReturn}{Returns}
+The constant iterator that points to the first \hyperlink{class_morse_char}{Morse\-Char} 
+\end{DoxyReturn}
+
+
+Definition at line 155 of file Morse\-String.\-hpp.
+
+\hypertarget{class_morse_string_a3cb4e2bce884cd3f86dba55692a80952}{\index{Morse\-String@{Morse\-String}!buffer@{buffer}}
+\index{buffer@{buffer}!MorseString@{Morse\-String}}
+\subsubsection[{buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Morse\-Char}$\ast$ const$\ast$ Morse\-String\-::buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_morse_string_a3cb4e2bce884cd3f86dba55692a80952}
+
+
+Gets the internal buffer of morse code characters. 
+
+\begin{DoxyReturn}{Returns}
+A constant array of pointers to \hyperlink{class_morse_char}{Morse\-Char} objects. 
+\end{DoxyReturn}
+
+
+Definition at line 137 of file Morse\-String.\-hpp.
+
+\hypertarget{class_morse_string_a2324c605f87c9858ab6985d33715a725}{\index{Morse\-String@{Morse\-String}!create\-From\-Ascii@{create\-From\-Ascii}}
+\index{create\-From\-Ascii@{create\-From\-Ascii}!MorseString@{Morse\-String}}
+\subsubsection[{create\-From\-Ascii}]{\setlength{\rightskip}{0pt plus 5cm}void Morse\-String\-::create\-From\-Ascii (
+\begin{DoxyParamCaption}
+\item[{{\bf Morse\-String} \&}]{result, }
+\item[{const char $\ast$}]{ascii, }
+\item[{size\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_morse_string_a2324c605f87c9858ab6985d33715a725}
+
+
+Utility method for populating a \hyperlink{class_morse_string}{Morse\-String} object with the corresponding \hyperlink{class_morse_char}{Morse\-Char} objects. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em result} & This is a reference to a \hyperlink{class_morse_string}{Morse\-String} object to be populated. \\
+\hline
+\mbox{\tt in}  & {\em ascii} & A valid pointer to an A\-S\-C\-I\-I string containing only alpha-\/numeric characters. \\
+\hline
+\mbox{\tt in}  & {\em n} & The size of the 'ascii' buffer.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\-::out\-\_\-of\-\_\-range} & exception if ascii contains characters that neither integers or alphabetical letters. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 177 of file Morse\-String.\-cpp.
+
+\hypertarget{class_morse_string_ae32d77ba2cd12479ba18f8bbc328a335}{\index{Morse\-String@{Morse\-String}!empty@{empty}}
+\index{empty@{empty}!MorseString@{Morse\-String}}
+\subsubsection[{empty}]{\setlength{\rightskip}{0pt plus 5cm}bool Morse\-String\-::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_morse_string_ae32d77ba2cd12479ba18f8bbc328a335}
+
+
+Return true if the current size of this string is 0. 
+
+
+
+Definition at line 189 of file Morse\-String.\-hpp.
+
+\hypertarget{class_morse_string_aca140f1865de7913bed748748b2365c7}{\index{Morse\-String@{Morse\-String}!end@{end}}
+\index{end@{end}!MorseString@{Morse\-String}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}{\bf iterator} Morse\-String\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_morse_string_aca140f1865de7913bed748748b2365c7}
+
+
+Gets the end of this string (passed the last character). 
+
+\begin{DoxyReturn}{Returns}
+The iterator that points to the next memory location of the internal buffer. 
+\end{DoxyReturn}
+
+
+Definition at line 165 of file Morse\-String.\-hpp.
+
+\hypertarget{class_morse_string_ad3bab83787cf1938feda565894b3a268}{\index{Morse\-String@{Morse\-String}!end@{end}}
+\index{end@{end}!MorseString@{Morse\-String}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const\-\_\-iterator} Morse\-String\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_morse_string_ad3bab83787cf1938feda565894b3a268}
+
+
+Gets the end of this string (passed the last character). 
+
+\begin{DoxyReturn}{Returns}
+The constant iterator that points to the next memory location of the internal buffer. 
+\end{DoxyReturn}
+
+
+Definition at line 175 of file Morse\-String.\-hpp.
+
+\hypertarget{class_morse_string_a5f1355f99e372c138304b1613ce5c0a8}{\index{Morse\-String@{Morse\-String}!get\-By\-Ascii@{get\-By\-Ascii}}
+\index{get\-By\-Ascii@{get\-By\-Ascii}!MorseString@{Morse\-String}}
+\subsubsection[{get\-By\-Ascii}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Morse\-Char} const $\ast$ Morse\-String\-::get\-By\-Ascii (
+\begin{DoxyParamCaption}
+\item[{char}]{c}
+\end{DoxyParamCaption}
+) const}}\label{class_morse_string_a5f1355f99e372c138304b1613ce5c0a8}
+
+
+Looks for the character, c, in this string. The character to look for is case-\/insensitive. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & A character to look for in this string.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{class_morse_char}{Morse\-Char} object pointer for c.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em An} & std\-::out\-\_\-of\-\_\-range exception if this string does not contain c \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 129 of file Morse\-String.\-cpp.
+
+\hypertarget{class_morse_string_a9eb4dbebd5f6c28bf7453dabdbd46a1b}{\index{Morse\-String@{Morse\-String}!get\-By\-Morse@{get\-By\-Morse}}
+\index{get\-By\-Morse@{get\-By\-Morse}!MorseString@{Morse\-String}}
+\subsubsection[{get\-By\-Morse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Morse\-Char} const $\ast$ Morse\-String\-::get\-By\-Morse (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{code, }
+\item[{size\-\_\-t}]{n}
+\end{DoxyParamCaption}
+) const}}\label{class_morse_string_a9eb4dbebd5f6c28bf7453dabdbd46a1b}
+
+
+Looks for the morse code, code, in this string. Generally, the morse code M\-U\-S\-T be a character string pointer consisting of only '.' and '-\/' and ' ' and possibly a N\-U\-L\-L. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & An A\-S\-C\-I\-I character string representing morse code. \\
+\hline
+{\em n} & The size of the code.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{class_morse_char}{Morse\-Char} object pointer for code.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em An} & std\-::out\-\_\-of\-\_\-range exception if this string does not contain the provided morse code. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 141 of file Morse\-String.\-cpp.
+
+\hypertarget{class_morse_string_ad6bc73513fbab3b758fb85c865c54cd0}{\index{Morse\-String@{Morse\-String}!size@{size}}
+\index{size@{size}!MorseString@{Morse\-String}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf size\-\_\-type} Morse\-String\-::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_morse_string_ad6bc73513fbab3b758fb85c865c54cd0}
+
+
+Return the current size of this string. 
+
+
+
+Definition at line 182 of file Morse\-String.\-hpp.
+
+\hypertarget{class_morse_string_a6938ba103471da987c825e24c9ae955f}{\index{Morse\-String@{Morse\-String}!to\-String@{to\-String}}
+\index{to\-String@{to\-String}!MorseString@{Morse\-String}}
+\subsubsection[{to\-String}]{\setlength{\rightskip}{0pt plus 5cm}void Morse\-String\-::to\-String (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str, }
+\item[{size\-\_\-t}]{n}
+\end{DoxyParamCaption}
+) const}}\label{class_morse_string_a6938ba103471da987c825e24c9ae955f}
+
+
+Translate this string into a series of '.' and '-\/' and '/' and ' ' A\-S\-C\-I\-I characters as a representation of this string's morse code. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em str} & A valid memory location to contain the morse code result. \\
+\hline
+\mbox{\tt in}  & {\em n} & The size of str in characters.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+str will always return null-\/terminated. If str is too small for the whole message, we return only a partial result. 
+\end{DoxyNote}
+
+
+Definition at line 153 of file Morse\-String.\-cpp.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_morse_string_8hpp}{Morse\-String.\-hpp}\item 
+\hyperlink{_morse_string_8cpp}{Morse\-String.\-cpp}\end{DoxyCompactItemize}

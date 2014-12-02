@@ -1,0 +1,194 @@
+\hypertarget{class_morse_char}{\section{Morse\-Char Class Reference}
+\label{class_morse_char}\index{Morse\-Char@{Morse\-Char}}
+}
+
+
+{\ttfamily \#include $<$Morse\-Char.\-hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_morse_char_aff6cb64cd26d9f8da4b98c0509f2466c}{Morse\-Char} ()
+\item 
+\hyperlink{class_morse_char_a89474aae39578b6d9f76792ba5e7c67e}{Morse\-Char} (char ascii, const char $\ast$code, size\-\_\-t n)
+\begin{DoxyCompactList}\small\item\em Construct a \hyperlink{class_morse_char}{Morse\-Char} object for the given A\-S\-C\-I\-I character and morse code. \end{DoxyCompactList}\item 
+\hyperlink{class_morse_char_a2182aa713ab02e0ca477d1bd2b00d11b}{Morse\-Char} (\hyperlink{class_morse_char}{Morse\-Char} \&o)
+\begin{DoxyCompactList}\small\item\em The copy constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_morse_char_ab53e6f03baf6f884ae3e82d1efcf2c2d}{$\sim$\-Morse\-Char} ()
+\item 
+void \hyperlink{class_morse_char_a0e4dab38c100140295c3ee97883112bd}{set\-Ascii\-Character} (char ascii)
+\begin{DoxyCompactList}\small\item\em Set this object's ascii character. \end{DoxyCompactList}\item 
+void \hyperlink{class_morse_char_a9af48458014562d206a6e6367c93d8dc}{set\-Morse\-Code} (const char $\ast$code)
+\begin{DoxyCompactList}\small\item\em Set this object's morse code. Copies the value to our own area. \end{DoxyCompactList}\item 
+char \hyperlink{class_morse_char_a93848fca8637658b31bcb5986130deae}{get\-Ascii\-Character} () const 
+\begin{DoxyCompactList}\small\item\em Gets the A\-S\-C\-I\-I character that is represented by morse code. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{class_morse_char_af451c82c6e930b2871ec9138e61cfefe}{get\-Morse\-Code} () const 
+\begin{DoxyCompactList}\small\item\em Gets the Morse Code that represents this character. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class abstracts a character and its representative morse code string usually in the form of dots and dashes.
+
+The class keeps its own internal copy of the morse code for the character, and will release memory through the destructor. All instance variables should not be heavily modified once this object is created. Furthermore, we expect, but do not enforce, that this object is immutable.
+
+\begin{DoxyNote}{Note}
+This class was tested with only A\-S\-C\-I\-I c-\/strings.
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]Generalize this class to use other types of characters. \end{DoxyRefDesc}
+
+
+Definition at line 37 of file Morse\-Char.\-hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_morse_char_aff6cb64cd26d9f8da4b98c0509f2466c}{\index{Morse\-Char@{Morse\-Char}!Morse\-Char@{Morse\-Char}}
+\index{Morse\-Char@{Morse\-Char}!MorseChar@{Morse\-Char}}
+\subsubsection[{Morse\-Char}]{\setlength{\rightskip}{0pt plus 5cm}Morse\-Char\-::\-Morse\-Char (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_morse_char_aff6cb64cd26d9f8da4b98c0509f2466c}
+
+
+Definition at line 43 of file Morse\-Char.\-hpp.
+
+\hypertarget{class_morse_char_a89474aae39578b6d9f76792ba5e7c67e}{\index{Morse\-Char@{Morse\-Char}!Morse\-Char@{Morse\-Char}}
+\index{Morse\-Char@{Morse\-Char}!MorseChar@{Morse\-Char}}
+\subsubsection[{Morse\-Char}]{\setlength{\rightskip}{0pt plus 5cm}Morse\-Char\-::\-Morse\-Char (
+\begin{DoxyParamCaption}
+\item[{char}]{ascii, }
+\item[{const char $\ast$}]{code, }
+\item[{size\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_morse_char_a89474aae39578b6d9f76792ba5e7c67e}
+
+
+Construct a \hyperlink{class_morse_char}{Morse\-Char} object for the given A\-S\-C\-I\-I character and morse code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ascii} & The character which will be represented by morse code. \\
+\hline
+{\em code} & The morse code string that represents the character. \\
+\hline
+{\em n} & The size of code in characters. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 54 of file Morse\-Char.\-hpp.
+
+\hypertarget{class_morse_char_a2182aa713ab02e0ca477d1bd2b00d11b}{\index{Morse\-Char@{Morse\-Char}!Morse\-Char@{Morse\-Char}}
+\index{Morse\-Char@{Morse\-Char}!MorseChar@{Morse\-Char}}
+\subsubsection[{Morse\-Char}]{\setlength{\rightskip}{0pt plus 5cm}Morse\-Char\-::\-Morse\-Char (
+\begin{DoxyParamCaption}
+\item[{{\bf Morse\-Char} \&}]{o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_morse_char_a2182aa713ab02e0ca477d1bd2b00d11b}
+
+
+The copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & The constructor for which to copy from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The copy constructor's purpose is to take ownership of the internal m\-Code pointer. This is to add efficiency to memory utilization. 
+\end{DoxyNote}
+
+
+Definition at line 66 of file Morse\-Char.\-hpp.
+
+\hypertarget{class_morse_char_ab53e6f03baf6f884ae3e82d1efcf2c2d}{\index{Morse\-Char@{Morse\-Char}!$\sim$\-Morse\-Char@{$\sim$\-Morse\-Char}}
+\index{$\sim$\-Morse\-Char@{$\sim$\-Morse\-Char}!MorseChar@{Morse\-Char}}
+\subsubsection[{$\sim$\-Morse\-Char}]{\setlength{\rightskip}{0pt plus 5cm}Morse\-Char\-::$\sim$\-Morse\-Char (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_morse_char_ab53e6f03baf6f884ae3e82d1efcf2c2d}
+
+
+Definition at line 72 of file Morse\-Char.\-hpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_morse_char_a93848fca8637658b31bcb5986130deae}{\index{Morse\-Char@{Morse\-Char}!get\-Ascii\-Character@{get\-Ascii\-Character}}
+\index{get\-Ascii\-Character@{get\-Ascii\-Character}!MorseChar@{Morse\-Char}}
+\subsubsection[{get\-Ascii\-Character}]{\setlength{\rightskip}{0pt plus 5cm}char Morse\-Char\-::get\-Ascii\-Character (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_morse_char_a93848fca8637658b31bcb5986130deae}
+
+
+Gets the A\-S\-C\-I\-I character that is represented by morse code. 
+
+
+
+Definition at line 98 of file Morse\-Char.\-hpp.
+
+\hypertarget{class_morse_char_af451c82c6e930b2871ec9138e61cfefe}{\index{Morse\-Char@{Morse\-Char}!get\-Morse\-Code@{get\-Morse\-Code}}
+\index{get\-Morse\-Code@{get\-Morse\-Code}!MorseChar@{Morse\-Char}}
+\subsubsection[{get\-Morse\-Code}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Morse\-Char\-::get\-Morse\-Code (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_morse_char_af451c82c6e930b2871ec9138e61cfefe}
+
+
+Gets the Morse Code that represents this character. 
+
+
+
+Definition at line 105 of file Morse\-Char.\-hpp.
+
+\hypertarget{class_morse_char_a0e4dab38c100140295c3ee97883112bd}{\index{Morse\-Char@{Morse\-Char}!set\-Ascii\-Character@{set\-Ascii\-Character}}
+\index{set\-Ascii\-Character@{set\-Ascii\-Character}!MorseChar@{Morse\-Char}}
+\subsubsection[{set\-Ascii\-Character}]{\setlength{\rightskip}{0pt plus 5cm}void Morse\-Char\-::set\-Ascii\-Character (
+\begin{DoxyParamCaption}
+\item[{char}]{ascii}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_morse_char_a0e4dab38c100140295c3ee97883112bd}
+
+
+Set this object's ascii character. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ascii} & Usually an alpha-\/numeric A\-S\-C\-I\-I-\/character. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 81 of file Morse\-Char.\-hpp.
+
+\hypertarget{class_morse_char_a9af48458014562d206a6e6367c93d8dc}{\index{Morse\-Char@{Morse\-Char}!set\-Morse\-Code@{set\-Morse\-Code}}
+\index{set\-Morse\-Code@{set\-Morse\-Code}!MorseChar@{Morse\-Char}}
+\subsubsection[{set\-Morse\-Code}]{\setlength{\rightskip}{0pt plus 5cm}void Morse\-Char\-::set\-Morse\-Code (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{code}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_morse_char_a9af48458014562d206a6e6367c93d8dc}
+
+
+Set this object's morse code. Copies the value to our own area. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & Usually a string of '.' and '-\/' {\itshape M\-U\-S\-T} be N\-U\-L\-L-\/terminated \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 90 of file Morse\-Char.\-hpp.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_morse_char_8hpp}{Morse\-Char.\-hpp}\end{DoxyCompactItemize}
